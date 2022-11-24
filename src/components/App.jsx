@@ -1,12 +1,13 @@
 import './App.css';
-import Navbar from './Navbar/navbar';
-import ItemListContainer from './ItemListContainer/itemListContainer';
-
+import Navbar from './Navbar/Navbar.jsx';
+import ItemListContainer from './ItemListContainer/ItemListContainer';
+import ItemCount from './ItemCount/ItemCount';
 function App() {
   return (
     <>
     <Navbar/>
-    <ItemListContainer greeting={"Hola"}/>
+    <ItemListContainer greeting={"Hola"}/> 
+    <ItemCount stock={10}/>
     </>
   );
 }

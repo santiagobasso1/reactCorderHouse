@@ -1,4 +1,4 @@
-import './categorias.css';
+import './Categorias.css';
 
 const Categorias = () => {
     return (

@@ -1,7 +1,6 @@
-import './navbar.css';
-import CartWidget from '../CartWidget/cartWidget';
-import categorias from '../Categorias/categorias.jsx';
-import Categorias from '../Categorias/categorias.jsx';
+import './Navbar.css';
+import CartWidget from '../CartWidget/CartWidget';
+import Categorias from '../Categorias/Categorias.jsx';
 
 
 const Navbar = () => {
