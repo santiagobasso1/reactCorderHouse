@@ -1,0 +1,122 @@
+[{
+    "id":1,
+    "idCategoria":1,
+    "producto":"Procesador",
+    "marca":"Intel",
+    "modelo":"I7-4790",
+    "precio":50000,
+    "stock":7,
+    "img":"i7_4790.jpg"
+},
+
+{
+    "id":2,
+    "idCategoria":1,
+    "producto":"Procesador",
+    "marca":"Intel",
+    "modelo":"I7 11700k",
+    "precio":93850,
+    "stock":10,
+    "img":"i7_11700k.jpg"
+},
+{
+    "id":3,
+    "idCategoria":1,
+    "producto":"Procesador",
+    "marca":"AMD",
+    "modelo":"Ryzen 5 5600",
+    "precio":48000,
+    "stock":9,
+    "img":"Ryzen_5_5600.jpg"
+},
+{
+    "id":4,
+    "idCategoria":1,
+    "producto":"Procesador",
+    "marca":"AMD",
+    "modelo":"Ryzen Threadripper 3990x",
+    "precio":490000,
+    "stock":3,
+    "img":"threadripper3990x.jpg"
+},
+{
+    "id":5,
+    "idCategoria":2,
+    "producto":"Tarjeta Gráfica",
+    "marca":"Nvidia",
+    "modelo":"RTX 3090 EVGA",
+    "precio":389420,
+    "stock":1,
+    "img":"rtx3090.jpg"
+},
+{
+    "id":6,
+    "idCategoria":2,
+    "producto":"Tarjeta Gráfica",
+    "marca":"Nvidia",
+    "modelo":"RTX 3060 TI EVGA",
+    "precio":175000,
+    "stock":3,
+    "img":"rtx3060ti.jpg"
+},
+{
+    "id":7,
+    "idCategoria":2,
+    "producto":"Tarjeta Gráfica",
+    "marca":"AMD",
+    "modelo":"Rx 6800 xt GIGABYTE",
+    "precio":180000,
+    "stock":15,
+    "img":"rx6800xt.jpg"
+},
+{
+    "id":8,
+    "idCategoria":2,
+    "producto":"Tarjeta Gráfica",
+    "marca":"AMD",
+    "modelo":"Rx 5500 xt ASUS",
+    "precio":98420,
+    "stock":10,
+    "img":"rx5500xt.jpg"
+},
+{
+    "id":9,
+    "idCategoria":3,
+    "producto":"Motherboard",
+    "marca":"GigaByte",
+    "modelo":"Z97 Gaming3",
+    "precio":30000,
+    "stock":5,
+    "img":"Z97Gaming3.jpg"
+},
+{
+    "id":10,
+    "idCategoria":3,
+    "producto":"Motherboard",
+    "marca":"AORUS",
+    "modelo":"Z590 ULTRA",
+    "precio":82000,
+    "stock":1,
+    "img":"aorusZ590ULTRA.jpg"
+},
+{
+    "id":11,
+    "idCategoria":3,
+    "producto":"Motherboard",
+    "marca":"Republic of Gamers",
+    "modelo":"Zenith II Alpha",
+    "precio":1000000,
+    "stock":1,
+    "img":"ROGthreadripper.jpg"
+},
+{
+    "id":12,
+    "idCategoria":3,
+    "producto":"Motherboard",
+    "marca":"TUF Gaming",
+    "modelo":"X570 Plus",
+    "precio":55410,
+    "stock":12,
+    "img":"X570plus.jpg"
+}
+]

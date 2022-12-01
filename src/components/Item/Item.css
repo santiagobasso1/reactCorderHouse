@@ -1,0 +1,10 @@
+.imagenCard{
+    width: 250px;
+    height: 250px;
+}
+
+.cardBody{
+    background-color: white;
+    margin-bottom: 3px;
+    text-align: center;
+}

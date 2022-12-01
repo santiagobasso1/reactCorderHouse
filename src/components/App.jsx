@@ -7,7 +7,6 @@ function App() {
     <>
     <Navbar/>
     <ItemListContainer greeting={"Hola"}/> 
-    <ItemCount stock={10}/>
     </>
   );
 }
