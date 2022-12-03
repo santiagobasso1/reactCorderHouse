@@ -4,9 +4,9 @@ const Categorias = () => {
     return (
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-            <button className="botonesNavBar"><Link className='nav-link' to={"/categoria/1"}>Procesadores</Link></button>
-            <button className="botonesNavBar"><Link className='nav-link' to={"/categoria/2"}>Graficas</Link></button>
-            <button className="botonesNavBar"><Link className='nav-link' to={"/categoria/3"}>Motherboards</Link></button>
+            <button className="botonesNavBar"><Link className='nav-link' to={"/categoria/procesadores"}>Procesadores</Link></button>
+            <button className="botonesNavBar"><Link className='nav-link' to={"/categoria/graficas"}>Graficas</Link></button>
+            <button className="botonesNavBar"><Link className='nav-link' to={"/categoria/motherboards"}>Motherboards</Link></button>
             </div>
         </div>
     );
