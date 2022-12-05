@@ -1,6 +1,6 @@
 [{
     "id":1,
-    "idCategoria":1,
+    "idCategoria":"procesadores",
     "producto":"Procesador",
     "marca":"Intel",
     "modelo":"I7_4790",
@@ -11,7 +11,7 @@
 
 {
     "id":2,
-    "idCategoria":1,
+    "idCategoria":"procesadores",
     "producto":"Procesador",
     "marca":"Intel",
     "modelo":"I7_11700k",
@@ -21,7 +21,7 @@
 },
 {
     "id":3,
-    "idCategoria":1,
+    "idCategoria":"procesadores",
     "producto":"Procesador",
     "marca":"AMD",
     "modelo":"Ryzen_5_5600",
@@ -31,7 +31,7 @@
 },
 {
     "id":4,
-    "idCategoria":1,
+    "idCategoria":"procesadores",
     "producto":"Procesador",
     "marca":"AMD",
     "modelo":"Ryzen_Threadripper_3990x",
@@ -41,7 +41,7 @@
 },
 {
     "id":5,
-    "idCategoria":2,
+    "idCategoria":"graficas",
     "producto":"Tarjeta Gráfica",
     "marca":"Nvidia",
     "modelo":"RTX_3090_EVGA",
@@ -51,7 +51,7 @@
 },
 {
     "id":6,
-    "idCategoria":2,
+    "idCategoria":"graficas",
     "producto":"Tarjeta Gráfica",
     "marca":"Nvidia",
     "modelo":"RTX_3060_TI_EVGA",
@@ -61,7 +61,7 @@
 },
 {
     "id":7,
-    "idCategoria":2,
+    "idCategoria":"graficas",
     "producto":"Tarjeta Gráfica",
     "marca":"AMD",
     "modelo":"Rx_6800_xt_GIGABYTE",
@@ -71,7 +71,7 @@
 },
 {
     "id":8,
-    "idCategoria":2,
+    "idCategoria":"graficas",
     "producto":"Tarjeta Gráfica",
     "marca":"AMD",
     "modelo":"Rx_5500_xt_ASUS",
@@ -81,7 +81,7 @@
 },
 {
     "id":9,
-    "idCategoria":3,
+    "idCategoria":"motherboards",
     "producto":"Motherboard",
     "marca":"GigaByte",
     "modelo":"Z97_Gaming_3",
@@ -91,7 +91,7 @@
 },
 {
     "id":10,
-    "idCategoria":3,
+    "idCategoria":"motherboards",
     "producto":"Motherboard",
     "marca":"AORUS",
     "modelo":"Z590_ULTRA",
@@ -101,7 +101,7 @@
 },
 {
     "id":11,
-    "idCategoria":3,
+    "idCategoria":"motherboards",
     "producto":"Motherboard",
     "marca":"Republic of Gamers",
     "modelo":"Zenith_II_Alpha",
@@ -111,7 +111,7 @@
 },
 {
     "id":12,
-    "idCategoria":3,
+    "idCategoria":"motherboards",
     "producto":"Motherboard",
     "marca":"TUF Gaming",
     "modelo":"X570_Plus",
