@@ -3,7 +3,7 @@
     "idCategoria":1,
     "producto":"Procesador",
     "marca":"Intel",
-    "modelo":"I7-4790",
+    "modelo":"I7_4790",
     "precio":50000,
     "stock":7,
     "img":"i7_4790.jpg"
@@ -14,7 +14,7 @@
     "idCategoria":1,
     "producto":"Procesador",
     "marca":"Intel",
-    "modelo":"I7 11700k",
+    "modelo":"I7_11700k",
     "precio":93850,
     "stock":10,
     "img":"i7_11700k.jpg"
@@ -24,7 +24,7 @@
     "idCategoria":1,
     "producto":"Procesador",
     "marca":"AMD",
-    "modelo":"Ryzen 5 5600",
+    "modelo":"Ryzen_5_5600",
     "precio":48000,
     "stock":9,
     "img":"Ryzen_5_5600.jpg"
@@ -34,7 +34,7 @@
     "idCategoria":1,
     "producto":"Procesador",
     "marca":"AMD",
-    "modelo":"Ryzen Threadripper 3990x",
+    "modelo":"Ryzen_Threadripper_3990x",
     "precio":490000,
     "stock":3,
     "img":"threadripper3990x.jpg"
@@ -44,7 +44,7 @@
     "idCategoria":2,
     "producto":"Tarjeta Gráfica",
     "marca":"Nvidia",
-    "modelo":"RTX 3090 EVGA",
+    "modelo":"RTX_3090_EVGA",
     "precio":389420,
     "stock":1,
     "img":"rtx3090.jpg"
@@ -54,7 +54,7 @@
     "idCategoria":2,
     "producto":"Tarjeta Gráfica",
     "marca":"Nvidia",
-    "modelo":"RTX 3060 TI EVGA",
+    "modelo":"RTX_3060_TI_EVGA",
     "precio":175000,
     "stock":3,
     "img":"rtx3060ti.jpg"
@@ -64,7 +64,7 @@
     "idCategoria":2,
     "producto":"Tarjeta Gráfica",
     "marca":"AMD",
-    "modelo":"Rx 6800 xt GIGABYTE",
+    "modelo":"Rx_6800_xt_GIGABYTE",
     "precio":180000,
     "stock":15,
     "img":"rx6800xt.jpg"
@@ -74,7 +74,7 @@
     "idCategoria":2,
     "producto":"Tarjeta Gráfica",
     "marca":"AMD",
-    "modelo":"Rx 5500 xt ASUS",
+    "modelo":"Rx_5500_xt_ASUS",
     "precio":98420,
     "stock":10,
     "img":"rx5500xt.jpg"
@@ -84,7 +84,7 @@
     "idCategoria":3,
     "producto":"Motherboard",
     "marca":"GigaByte",
-    "modelo":"Z97 Gaming3",
+    "modelo":"Z97_Gaming_3",
     "precio":30000,
     "stock":5,
     "img":"Z97Gaming3.jpg"
@@ -94,7 +94,7 @@
     "idCategoria":3,
     "producto":"Motherboard",
     "marca":"AORUS",
-    "modelo":"Z590 ULTRA",
+    "modelo":"Z590_ULTRA",
     "precio":82000,
     "stock":1,
     "img":"aorusZ590ULTRA.jpg"
@@ -104,7 +104,7 @@
     "idCategoria":3,
     "producto":"Motherboard",
     "marca":"Republic of Gamers",
-    "modelo":"Zenith II Alpha",
+    "modelo":"Zenith_II_Alpha",
     "precio":1000000,
     "stock":1,
     "img":"ROGthreadripper.jpg"
@@ -114,7 +114,7 @@
     "idCategoria":3,
     "producto":"Motherboard",
     "marca":"TUF Gaming",
-    "modelo":"X570 Plus",
+    "modelo":"X570_Plus",
     "precio":55410,
     "stock":12,
     "img":"X570plus.jpg"

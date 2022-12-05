@@ -5,16 +5,17 @@ import consultarBDD from "../../assets/funciones";
 import ItemDetail from "../ItemDetail/ItemDetail";
 const ItemDetailContainer = () => {
     const [producto,setProducto] = useState([]);
-    const {id}=useParams();
+    const {modelo}=useParams();
     useEffect(() => {
         consultarBDD('../json/productos.json').then(productos => {
-            const prod = productos.find(product => product.id === parseInt(id));
+            const prod = productos.find(product => product.modelo === modelo);
             setProducto(prod);
         })
-    }, []);
+    }, [modelo]);
     return (
         <div className="card mb-3 container itemDetail">
-            <ItemDetail producto={producto}/>            
+            <ItemDetail producto={producto}/>         
+               
         </div>
     );
 }
