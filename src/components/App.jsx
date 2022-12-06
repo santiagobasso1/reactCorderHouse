@@ -5,6 +5,7 @@ import Navbar from './Navbar/Navbar.jsx';
 import ItemListContainer from './ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './ItemDetailContainer/ItemDetailContainer';
 import Cart from './Cart/Cart';
+import Checkout from './Checkout/Checkout';
 function App() {
   return (
     <>
@@ -12,9 +13,10 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<ItemListContainer/>}/>
-        <Route path='/producto/:modelo' element={<ItemDetailContainer/>}/>
         <Route path='/categoria/:categoria' element={<ItemListContainer/>}/>
+        <Route path='/producto/:modelo' element={<ItemDetailContainer/>}/>
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/checkout' element={<Checkout/>}/>
       </Routes>
     </BrowserRouter>
     </>
