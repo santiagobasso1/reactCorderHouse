@@ -21,3 +21,8 @@
     margin-bottom: 30%;
     margin-right: 30%;
 }
+
+.contadorCarrito{
+    position: relative;
+    left: 20%;
+}
