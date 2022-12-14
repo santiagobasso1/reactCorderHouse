@@ -1,13 +1,14 @@
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
-
+import { useDarkModeContext } from "../../context/DarkModeContext";
 const ItemDetail = ({producto}) => {
     const onAdd = (contador)=>{
         console.log(contador);
     }
+    const {darkMode} = useDarkModeContext();
     return (
-        
-        <div className="row g-0" style={{width: '18rem'}}>
+
+            <div className={`row g-0 ${darkMode ? 'cardProductoDetailDark' : 'cardProducto'}`}>
             <div className="col-md-4">
                 <img className="imagenCard" src={`../img/${producto.img}`} alt="" />
             </div>
@@ -21,6 +22,7 @@ const ItemDetail = ({producto}) => {
                 <button className="btn btn-secundary"><Link to="/cart" className="nav-link">Ir al Carrito</Link></button>
             </div>        
         </div>
+        
     );
 }
 

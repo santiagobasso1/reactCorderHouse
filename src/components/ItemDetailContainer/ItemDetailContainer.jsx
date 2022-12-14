@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
         })
     }, [modelo]);
     return (
-        <div className="card mb-3 container itemDetail">
+        <div className="card cardProductoDetail itemDetail">
             <ItemDetail producto={producto}/>         
                
         </div>

@@ -1,5 +1,34 @@
 .cardProducto {
     margin: 30px;
+    width: 18rem;
+    text-align: center;
+}
+
+.cardProductoDetail {
+    margin: 30px;
+    width: 18rem;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.cardProductoDetailDark{
+    margin: 30px;
+    width: 18rem;
+    text-align: center;
+    color: rgb(2, 2, 84);
+    
+}
+
+.cardProductoDark{
+    margin: 30px;
+    width: 18rem;
+    text-align: center;
+    color: rgb(2, 2, 84);
 }
 
 .contenedorCardsProductos{
@@ -8,7 +37,7 @@
 }
 
 .itemDetail{
-    width: 288px;
+    width: 20rem;
     margin-top: 150px;
 }
 
@@ -25,4 +54,15 @@
 .contadorCarrito{
     position: relative;
     left: 20%;
+}
+
+.cardBodyDark{
+    background-color: white;
+    text-align: center;
+    color: rgb(2, 2, 84);
+}
+
+.darkMode{
+    color: white;
+    background-color: black;
 }

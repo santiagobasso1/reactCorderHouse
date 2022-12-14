@@ -22,3 +22,8 @@
 	position:relative;
 	top:1px;
 }
+
+.navbarPersonal{
+    background-color: rgb(23, 1, 72);
+    border: none;
+}

@@ -12,20 +12,18 @@ const ItemListContainer = () => {
         if (categoria){
             consultarBDD('../json/productos.json').then(products => {
             const productList  = products.filter(prod => prod.stock > 0).filter(prod=> prod.idCategoria===categoria);
-            const cardProductos = ItemList({productList});
-            setProductos(cardProductos);
+            setProductos(productList);
             });
         }else{
             consultarBDD('./json/productos.json').then(products => {
             const productList  = products.filter(prod => prod.stock > 0);
-            const cardProductos = ItemList({productList});
-            setProductos(cardProductos); 
+            setProductos(productList); 
         });
     }
     }, [categoria]);
     return (
         <div className= 'row cardProductos' >
-            {productos}
+            <ItemList productList={productos}/>
         </div>
     );
 }
