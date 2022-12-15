@@ -1,11 +1,15 @@
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
 import { useDarkModeContext } from "../../context/DarkModeContext";
+import { useCarritoContext } from "../../context/CartContext";
 const ItemDetail = ({producto}) => {
-    const onAdd = (contador)=>{
-        console.log(contador);
-    }
     const {darkMode} = useDarkModeContext();
+    const {addItem} = useCarritoContext();
+    const onAdd = (contador)=>{
+        addItem(producto,contador);
+    }
+
+
     return (
 
             <div className={`row g-0 ${darkMode ? 'cardProductoDetailDark' : 'cardProducto'}`}>
@@ -13,7 +17,7 @@ const ItemDetail = ({producto}) => {
                 <img className="imagenCard" src={`../img/${producto.img}`} alt="" />
             </div>
             <div className="col-mb-8">
-                <h5 className="card-title">{producto.modelo}</h5>
+                <h5 className="card-title">{producto.nombreAMostrar}</h5>
                 <p className="card-text">Producto: {producto.producto} </p>
                 <p className="card-text">Marca: {producto.marca} </p>
                 <p className="card-text">Precio: {new Intl.NumberFormat('de-DE').format(producto.precio)} </p>
