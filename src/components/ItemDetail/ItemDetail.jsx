@@ -14,7 +14,7 @@ const ItemDetail = ({producto}) => {
 
             <div className={`row g-0 ${darkMode ? 'cardProductoDetailDark' : 'cardProducto'}`}>
             <div className="col-md-4">
-                <img className="imagenCard" src={`../img/${producto.img}`} alt="" />
+                <img className="imagenCard" src={producto.img} alt="" />
             </div>
             <div className="col-mb-8">
                 <h5 className="card-title">{producto.nombreAMostrar}</h5>

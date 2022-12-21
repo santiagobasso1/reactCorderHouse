@@ -6,12 +6,13 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 const ItemDetailContainer = () => {
     const [producto,setProducto] = useState([]);
     const {modelo}=useParams();
+    
     useEffect(() => {
         consultarBDD('../json/productos.json').then(productos => {
             const prod = productos.find(product => product.modelo === modelo);
             setProducto(prod);
         })
-    }, [modelo]);
+    }, [modelo]); //MODELO NO ESTOY SEGURO SI VA ENTRE CORCHETES
     return (
         <div className="card cardProductoDetail itemDetail">
             <ItemDetail producto={producto}/>         

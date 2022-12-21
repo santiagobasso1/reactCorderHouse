@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import ItemList from '../ItemList/ItemList';
 import consultarBDD from '../../assets/funciones.js'
 import './ItemListContainer.css'
+import { cargarBDD } from '../../assets/firebase';
 const ItemListContainer = () => {
 
     const [productos, setProductos] = useState([]);
@@ -12,18 +13,22 @@ const ItemListContainer = () => {
         if (categoria){
             consultarBDD('../json/productos.json').then(products => {
             const productList  = products.filter(prod => prod.stock > 0).filter(prod=> prod.idCategoria===categoria);
-            setProductos(productList);
+            const cardProductos = ItemList({productList})
+            setProductos(cardProductos);
             });
         }else{
             consultarBDD('./json/productos.json').then(products => {
             const productList  = products.filter(prod => prod.stock > 0);
-            setProductos(productList); 
+            const cardProductos = ItemList({productList})
+            setProductos(cardProductos); 
         });
     }
+
+    //cargarBDD().then(productos=> console.log(productos));
     }, [categoria]);
     return (
         <div className= 'row cardProductos' >
-            <ItemList productList={productos}/>
+            {productos}
         </div>
     );
 }

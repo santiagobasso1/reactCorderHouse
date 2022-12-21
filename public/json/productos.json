@@ -7,7 +7,7 @@
     "modelo":"I7_4790",
     "precio":50000,
     "stock":7,
-    "img":"i7_4790.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/i7_4790.jpg?alt=media&token=9180a992-2129-4ce9-b89e-08c8fdfcc7ac"
 },
 
 {
@@ -19,7 +19,7 @@
     "modelo":"I7_11700k",
     "precio":93850,
     "stock":10,
-    "img":"i7_11700k.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/i7_11700k.jpg?alt=media&token=1ed056cb-3956-4a45-8676-d8f24dce6805"
 },
 {
     "id":3,
@@ -30,7 +30,7 @@
     "modelo":"Ryzen_5_5600",
     "precio":48000,
     "stock":9,
-    "img":"Ryzen_5_5600.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/Ryzen_5_5600.jpg?alt=media&token=f4af6432-ab68-4aa2-85b4-6e5ad04a0c1d"
 },
 {
     "id":4,
@@ -41,7 +41,7 @@
     "modelo":"Ryzen_Threadripper_3990x",
     "precio":490000,
     "stock":3,
-    "img":"threadripper3990x.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/threadripper3990x.jpg?alt=media&token=e6389599-5247-4468-9e95-725d61d7f34e"
 },
 {
     "id":5,
@@ -52,7 +52,7 @@
     "modelo":"RTX_3090_EVGA",
     "precio":389420,
     "stock":1,
-    "img":"rtx3090.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/rtx3090.jpg?alt=media&token=5e87b010-c2af-4c35-86fe-645e3a1a8eba"
 },
 {
     "id":6,
@@ -63,7 +63,7 @@
     "modelo":"RTX_3060_TI_EVGA",
     "precio":175000,
     "stock":3,
-    "img":"rtx3060ti.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/rtx3060ti.jpg?alt=media&token=53bc9342-9adb-46d5-9b05-f74bb10b533e"
 },
 {
     "id":7,
@@ -74,7 +74,7 @@
     "modelo":"Rx_6800_xt_GIGABYTE",
     "precio":180000,
     "stock":15,
-    "img":"rx6800xt.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/rx6800xt.jpg?alt=media&token=9e1a529e-f064-41a9-a799-abbf95e245c0"
 },
 {
     "id":8,
@@ -85,7 +85,7 @@
     "modelo":"Rx_5500_xt_ASUS",
     "precio":98420,
     "stock":10,
-    "img":"rx5500xt.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/rx5500xt.jpg?alt=media&token=f28c7534-425f-497f-b90e-911baea8b560"
 },
 {
     "id":9,
@@ -96,7 +96,7 @@
     "modelo":"Z97_Gaming_3",
     "precio":30000,
     "stock":5,
-    "img":"Z97Gaming3.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/Z97Gaming3.jpg?alt=media&token=19280f24-e0fe-47e9-a079-f4e9039f58fc"
 },
 {
     "id":10,
@@ -107,7 +107,7 @@
     "modelo":"Z590_ULTRA",
     "precio":82000,
     "stock":1,
-    "img":"aorusZ590ULTRA.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/aorusZ590ULTRA.jpg?alt=media&token=932f4071-ace9-40fb-8f04-c85adf8bf82c"
 },
 {
     "id":11,
@@ -118,7 +118,7 @@
     "modelo":"Zenith_II_Alpha",
     "precio":1000000,
     "stock":1,
-    "img":"ROGthreadripper.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/ROGthreadripper.jpg?alt=media&token=bfa7fdda-23a5-4c84-92c5-e33dbb3ac93a"
 },
 {
     "id":12,
@@ -129,6 +129,6 @@
     "modelo":"X570_Plus",
     "precio":55410,
     "stock":12,
-    "img":"X570plus.jpg"
+    "img":"https://firebasestorage.googleapis.com/v0/b/ecommercereact2022.appspot.com/o/X570plus.jpg?alt=media&token=56b604c8-1100-469a-ac94-624ab3097d4d"
 }
 ]
