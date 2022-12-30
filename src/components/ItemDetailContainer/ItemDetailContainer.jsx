@@ -1,22 +1,23 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import consultarBDD from "../../assets/funciones";
+import { getProducto } from "../../assets/firebase";
 import ItemDetail from "../ItemDetail/ItemDetail";
 const ItemDetailContainer = () => {
+    
     const [producto,setProducto] = useState([]);
-    const {modelo}=useParams();
+    const {id}=useParams();
     
     useEffect(() => {
-        consultarBDD('../json/productos.json').then(productos => {
-            const prod = productos.find(product => product.modelo === modelo);
-            setProducto(prod);
-        })
-    }, [modelo]); //MODELO NO ESTOY SEGURO SI VA ENTRE CORCHETES
+        getProducto(id).then(prod =>setProducto(prod))      
+    }, []); //MODELO NO ESTOY SEGURO SI VA ENTRE CORCHETES
+
+
+
+
     return (
         <div className="card cardProductoDetail itemDetail">
-            <ItemDetail producto={producto}/>         
-               
+            <ItemDetail producto={producto}/>                        
         </div>
     );
 }

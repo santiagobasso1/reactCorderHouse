@@ -1,49 +1,83 @@
-import React from "react";
-import {useNavigate} from 'react-router-dom';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
+import { createOrdenCompra, getOrdenCompra, getProducto, updateProducto} from '../../assets/firebase';
+import { useCarritoContext } from '../../context/CartContext';
+import { toast } from 'react-toastify';
+
+
+
 const Checkout = () => {
 
-    const datosDelFormulario = React.useRef();
-    let navigate = useNavigate();
+    const {totalPrice, carrito, emptyCart} = useCarritoContext()
+    const datosFormulario = React.useRef()
+    let navigate = useNavigate()
 
+    const consultarFormulario = (e) => {
+        e.preventDefault()
+        const datForm = new FormData(datosFormulario.current)
+        const cliente = Object.fromEntries(datForm)
 
-    const consultarFormulario = (e)=>{
-        e.preventDefault();
-        console.log(datosDelFormulario);
-        const datForm = new FormData(datosDelFormulario.current);
-        const cliente = Object.fromEntries(datForm);
-        console.log(cliente);
-        e.target.reset();
-        navigate("/");
+        const aux = [...carrito]
+
+        aux.forEach(prodCarrito => {
+            getProducto(prodCarrito.id).then(prodBDD => {
+                if(prodBDD.stock >= prodCarrito.cant) {
+                    prodBDD.stock -= prodCarrito.cant
+                    updateProducto(prodCarrito.id, prodBDD)
+
+                } else {
+                    console.log("Stock no valido")
+                    //CASO USO PRODUCTO NO COMPRADO
+                }
+            })
+        })
+
+        createOrdenCompra(cliente,totalPrice(), new Date().toISOString().slice(0,10)).then(ordenCompra => {
+            getOrdenCompra(ordenCompra.id).then(item => {
+                toast.success(`¡Muchas gracias por su compra, su orden es ${item.id}`)
+                emptyCart()
+                e.target.reset()
+                navigate("/")
+            }).catch(error => {
+                toast.error("Su orden no fue generada con exito")
+                console.error(error)
+            })
+            
+        })
+        
     }
+
     return (
-        <div className="container" >
-            <form onSubmit={consultarFormulario} ref={datosDelFormulario} className="espaciadoNav formCheckout" >
+        <div className="container espaciadoNav">
+            <form onSubmit={consultarFormulario} ref={datosFormulario}>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlInput1" className="form-label">Nombre y Apellido</label>
-                    <input type="text" className="form-control" name="NombreYApellido" placeholder="Aqui ingrese su Nombre" />
+                    <label htmlFor="nombre" className="form-label">Nombre y Apellido</label>
+                    <input type="text" className="form-control" name="nombre" required />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlInput1">DNI</label>
-                    <input type="number" className="form-control" name="DNI" placeholder="Aqui ingrese su DNI" />
+                    <label htmlFor="email" className="form-label">Email</label>
+                    <input type="email" className="form-control" name="email" required />
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlInput1">Contacto</label>
-                    <input type="number" className="form-control" name="Contacto" placeholder="Aqui ingrese su Teléfono" />
+                    <label htmlFor="email2" className="form-label">Repetir Email</label>
+                    <input type="email" className="form-control" name="email2" required/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlInput1">Dirección</label>
-                    <input type="text" className="form-control" name="Direccion" placeholder="Aqui ingrese su Dirección Fisica" />
+                    <label htmlFor="dni" className="form-label">DNI</label>
+                    <input type="number" className="form-control" name="dni" required/>
                 </div>
                 <div className="mb-3">
-                    <label htmlFor="exampleFormControlInput1">Email</label>
-                    <input type="email" className="form-control" name="Email" placeholder="nombre@ejemplo.com" />
+                    <label htmlFor="celular" className="form-label">Celular</label>
+                    <input type="number" className="form-control" name="celular" required/>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="direccion" className="form-label">Dirección</label>
+                    <input type="text" className="form-control" name="direccion" required />
                 </div>
                 <button type="submit" className="btn btn-primary">Finalizar Compra</button>
             </form>
-        </div>
-        
-       
 
+        </div>
     );
 }
 
