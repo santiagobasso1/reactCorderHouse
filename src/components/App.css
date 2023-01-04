@@ -51,7 +51,7 @@
     margin-bottom: 30%;
     margin-right: 30%;
 }
-
+ 
 .contadorCarrito{
     position: relative;
     left: 20%;
@@ -66,4 +66,23 @@
 .darkMode{
     color: white;
     background-color: black;
+}
+
+.carritoVacio{
+
+    text-align: center;
+}
+
+.cartList{
+
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+.cartItemDarkColor{
+    color: rgb(2, 2, 84); 
+}
+
+.colorMensajeCheckout{
+    color: red;
 }
