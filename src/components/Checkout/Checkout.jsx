@@ -10,7 +10,10 @@ const Checkout = () => {
     const initialValues={nombreCompleto: "", email: "", validateEmail: "", DNI: "", celular: "", direccion: ""}
     const [formValues, setFormValues]=useState(initialValues);
     const [formErrors, setFormErrors]=useState({});
-    const [isSubmit, setIsSubmit] = useState(false);
+    const [isSubmit, setIsSubmit] = useState(false);    
+    const {totalPrice, carrito, emptyCart} = useCarritoContext()
+    const datosFormulario = React.useRef()
+    let navigate = useNavigate()
 
     useEffect(() => {
         if (Object.keys(formErrors).length === 0 && isSubmit) {
@@ -67,15 +70,12 @@ const Checkout = () => {
         return errors;
     };
 
-    const {totalPrice, carrito, emptyCart} = useCarritoContext()
-    const datosFormulario = React.useRef()
-    let navigate = useNavigate()
+
 
     const consultarFormulario = (e) => {
         const datForm = new FormData(datosFormulario.current)
         const cliente = Object.fromEntries(datForm)
         const aux = [...carrito]
-        let seguir = true;
         aux.forEach(prodCarrito => {
             getProducto(prodCarrito.id).then(prodBDD => {
                 if(prodBDD.stock >= prodCarrito.cant) {
@@ -83,13 +83,14 @@ const Checkout = () => {
                     updateProducto(prodCarrito.id, prodBDD)                    
                 } else {
                     toast.error(`El producto ${prodBDD.nombreAMostrar} no tiene stock`);                    
-                    emptyCart();  
-                    seguir=false;     
+                    emptyCart();
+                    navigate("/")                      
                 }
             })            
-        });
+        })
+
         delete cliente["validateEmail"];
-       if (seguir){
+
         createOrdenCompra(cliente,totalPrice(), new Date().toISOString().slice(0,10)).then(ordenCompra => {
             getOrdenCompra(ordenCompra.id).then(item => {
                 toast.success(`¡Muchas gracias por su compra, su orden es ${item.id}`)
@@ -100,7 +101,6 @@ const Checkout = () => {
                 console.error(error)
             })                
         })
-       }
 
     }
 
