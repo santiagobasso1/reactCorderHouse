@@ -17,7 +17,7 @@ const Cart = () => {
                 :
                 <div className="cartList cartContainer espaciadoNav " >
                 {carrito.map((prod,indice) =>
-                <div className={`card border-light ${darkMode ? 'cartItemDarkColor' : ''} `} key={indice} style={{maxWidth: '700px'}}>
+                <div className={`card cardCart border-light ${darkMode ? 'cartItemDarkColor' : ''} `} key={indice} style={{maxWidth: '700px'}}>
                     <div className="row g-0">
                         <div className="col-md-4">
                             <img src={prod.img} className="img-fluid rounded-start" alt="..." />

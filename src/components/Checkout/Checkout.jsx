@@ -13,7 +13,6 @@ const Checkout = () => {
     const [isSubmit, setIsSubmit] = useState(false);
 
     useEffect(() => {
-        console.log("Effect");
         if (Object.keys(formErrors).length === 0 && isSubmit) {
             consultarFormulario();
         }
@@ -68,7 +67,6 @@ const Checkout = () => {
         return errors;
     };
 
-
     const {totalPrice, carrito, emptyCart} = useCarritoContext()
     const datosFormulario = React.useRef()
     let navigate = useNavigate()
@@ -76,36 +74,35 @@ const Checkout = () => {
     const consultarFormulario = (e) => {
         const datForm = new FormData(datosFormulario.current)
         const cliente = Object.fromEntries(datForm)
-        
         const aux = [...carrito]
-
+        let seguir = true;
         aux.forEach(prodCarrito => {
             getProducto(prodCarrito.id).then(prodBDD => {
                 if(prodBDD.stock >= prodCarrito.cant) {
                     prodBDD.stock -= prodCarrito.cant
-                    updateProducto(prodCarrito.id, prodBDD)
-                    delete cliente["validateEmail"];
-                    createOrdenCompra(cliente,totalPrice(), new Date().toISOString().slice(0,10)).then(ordenCompra => {
-                        getOrdenCompra(ordenCompra.id).then(item => {
-                            toast.success(`¡Muchas gracias por su compra, su orden es ${item.id}`)
-                            emptyCart()              
-                            navigate("/")
-                        }).catch(error => {
-                            toast.error("Su orden no fue generada con exito")
-                            console.error(error)
-                        })                
-                    })
+                    updateProducto(prodCarrito.id, prodBDD)                    
                 } else {
                     toast.error(`El producto ${prodBDD.nombreAMostrar} no tiene stock`);                    
-                    emptyCart(); 
-                    navigate("/")                            
+                    emptyCart();  
+                    seguir=false;     
                 }
-            })
+            })            
+        });
+        delete cliente["validateEmail"];
+       if (seguir){
+        createOrdenCompra(cliente,totalPrice(), new Date().toISOString().slice(0,10)).then(ordenCompra => {
+            getOrdenCompra(ordenCompra.id).then(item => {
+                toast.success(`¡Muchas gracias por su compra, su orden es ${item.id}`)
+                emptyCart()              
+                navigate("/")
+            }).catch(error => {
+                toast.error("Su orden no fue generada con exito")
+                console.error(error)
+            })                
         })
+       }
 
-        
-       
-        }
+    }
 
     return (
         <div className="container espaciadoNav">
