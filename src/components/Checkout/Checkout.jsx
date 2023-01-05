@@ -14,6 +14,17 @@ const Checkout = () => {
     const {totalPrice, carrito, emptyCart} = useCarritoContext()
     const datosFormulario = React.useRef()
     let navigate = useNavigate()
+    //Realizo un check antes de completar el formulario por si no hay stock, por mas comodidad para el usuario
+    const checkCarritoVacio = [...carrito]
+    checkCarritoVacio.forEach(prodCarrito => {
+        getProducto(prodCarrito.id).then(prodBDD => {
+            if(prodBDD.stock < prodCarrito.cant) {
+                toast.error(`El producto ${prodBDD.nombreAMostrar} no tiene stock, le devolvimos al inicio para que siga comprando`);                    
+                emptyCart();
+                navigate("/")                          
+            }
+        })            
+    })
 
     useEffect(() => {
         if (Object.keys(formErrors).length === 0 && isSubmit) {

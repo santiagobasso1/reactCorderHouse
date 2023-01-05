@@ -14,7 +14,7 @@ npm i
 
 ## Screenshots 📸
 
-### Normal Mode
+### Normal Mode 🌝
 _Inicio_
 ![alt Text](https://github.com/santiagobasso1/reactCorderHouse/blob/master/docs/screenshotIndex.PNG)
 _Carrito_
@@ -22,7 +22,7 @@ _Carrito_
 _Checkout_
 ![alt Text](https://github.com/santiagobasso1/reactCorderHouse/blob/master/docs/screenshotCheckOut.PNG)
 
-### Dark Mode
+### Dark Mode 🌚
 _Inicio_
 ![alt Text](https://github.com/santiagobasso1/reactCorderHouse/blob/master/docs/screenshotIndexDarkMode.PNG)
 _Carrito_

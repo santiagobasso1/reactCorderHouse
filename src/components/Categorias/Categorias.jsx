@@ -1,4 +1,3 @@
-import './Categorias.css';
 import { Link } from 'react-router-dom';
 const Categorias = () => {
     return (

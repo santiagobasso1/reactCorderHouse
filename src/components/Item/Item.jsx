@@ -1,4 +1,3 @@
-import './Item.css';
 import { Link } from 'react-router-dom';
 import { useDarkModeContext } from '../../context/DarkModeContext';
 const Item = ({producto}) => {
