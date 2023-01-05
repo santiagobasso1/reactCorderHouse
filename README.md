@@ -31,4 +31,4 @@ _Checkout_
 ![alt Text](https://github.com/santiagobasso1/reactCorderHouse/blob/master/docs/screenshotCheckOutDarkMode.PNG)
 
 ## Video 🎥
-[![alt Text](https://github.com/santiagobasso1/reactCorderHouse/blob/master/docs/portadaVideo.PNG)](https://www.youtube.com/watch?v=xFTjd3aY3Ko)
+[![alt Text](https://github.com/santiagobasso1/reactCorderHouse/blob/master/docs/portadaVideo.png)](https://www.youtube.com/watch?v=xFTjd3aY3Ko)
